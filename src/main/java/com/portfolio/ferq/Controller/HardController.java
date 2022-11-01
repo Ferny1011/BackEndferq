@@ -21,8 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "https://frontendferq.web.app")
+@CrossOrigin(origins = {"https://frontendferq.web.app","http://localhost:4200"})
 @RequestMapping("/hard")
 public class HardController {
     @Autowired
@@ -57,6 +56,9 @@ public class HardController {
         if (StringUtils.isBlank(dtohard.getNombre())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
+        if (StringUtils.isBlank(dtohard.getURLimg())) {
+            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
+        }
         if (impHardService.existsByNombre(dtohard.getNombre())) {
             return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
         }
@@ -76,6 +78,9 @@ public class HardController {
         }
         if (StringUtils.isBlank(dtohard.getNombre())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        }
+        if (StringUtils.isBlank(dtohard.getURLimg())) {
+            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
         }
 
         HardSkills hardskill = impHardService.getOne(id).get();

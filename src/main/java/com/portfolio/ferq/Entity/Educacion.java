@@ -13,14 +13,19 @@ public class Educacion {
     private String fechaE;
     private String tituloE;
     private String descripcionE;
+    private String imgE;
+    private String urlE;
 
     public Educacion() {
     }
 
-    public Educacion(String fechaE, String tituloE, String descripcionE) {
+    public Educacion(String fechaE, String tituloE, String descripcionE, String imgE,String urlE) {
         this.fechaE = fechaE;
         this.tituloE = tituloE;
         this.descripcionE = descripcionE;
+        this.imgE = imgE;
+        this.urlE = urlE;
+        
     }
 
     public int getId() {
@@ -54,6 +59,25 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+
+
+    public String getUrlE() {
+        return urlE;
+    }
+
+    public void setUrlE(String urlE) {
+        this.urlE = urlE;
+    }
+
+    
     
     
 }

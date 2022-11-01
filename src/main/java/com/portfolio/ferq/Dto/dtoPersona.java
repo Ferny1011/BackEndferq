@@ -1,55 +1,28 @@
-package com.portfolio.ferq.Entity;
+package com.portfolio.ferq.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
-
-
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "Longitud de texto no aceptada")
+public class dtoPersona {
+    @NotBlank
     private String nombre;
-    
-    @NotNull
-    @Size(min = 1, max = 50, message = "Longitud de texto no aceptada")
+    @NotBlank
     private String apellido;
-    
-    @NotNull
+    @NotBlank
     private String img;
-    
-    @NotNull
-    @Size(min = 1, max = 70, message = "Longitud de texto no aceptada")
+    @NotBlank
     private String cv;
-    
-    @Size(min = 1, max = 250, message = "Longitud de texto no aceptada")
+    @NotBlank
     private String descripcion;
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String cv, String descripcion) {
+    public dtoPersona(String nombre, String apellido, String img, String cv, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.cv = cv;
         this.descripcion = descripcion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -93,5 +66,4 @@ public class Persona {
     }
     
     
-     
 }
