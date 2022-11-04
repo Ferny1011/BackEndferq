@@ -60,10 +60,6 @@ public class AcercaDeController {
         if (StringUtils.isBlank(dtoacercaDe.getSubtitulo())) {
             return new ResponseEntity(new Mensaje("El subtitulo es obligatorio"), HttpStatus.BAD_REQUEST);
         }
-        if (StringUtils.isBlank(dtoacercaDe.getImg())) {
-            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
-        }
-
         if (impAcercaDeService.existsByTitulo(dtoacercaDe.getTitulo())) {
             return new ResponseEntity(new Mensaje("Ese titulo ya existe"), HttpStatus.BAD_REQUEST);
         }

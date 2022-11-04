@@ -11,7 +11,6 @@ public class dtoAcercaDe {
     @NotBlank
     private String Subtitulo;
    
-    @NotBlank
     private String img;
 
     public dtoAcercaDe() {

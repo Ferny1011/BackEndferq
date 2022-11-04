@@ -7,7 +7,7 @@ public class dtoPersona {
     private String nombre;
     @NotBlank
     private String apellido;
-    @NotBlank
+    
     private String img;
     @NotBlank
     private String cv;

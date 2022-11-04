@@ -18,8 +18,7 @@ public class AcercaDe {
     
     @NotNull
     private String Subtitulo;
-   
-    @NotNull
+  
     private String img;
 
     public AcercaDe() {

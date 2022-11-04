@@ -23,7 +23,6 @@ public class Persona {
     @Size(min = 1, max = 50, message = "Longitud de texto no aceptada")
     private String apellido;
     
-    @NotNull
     private String img;
     
     @NotNull

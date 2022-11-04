@@ -57,7 +57,7 @@ public class HardController {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (StringUtils.isBlank(dtohard.getURLimg())) {
-            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El icono es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (impHardService.existsByNombre(dtohard.getNombre())) {
             return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
@@ -80,7 +80,7 @@ public class HardController {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         }
         if (StringUtils.isBlank(dtohard.getURLimg())) {
-            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El icono es obligatorio"), HttpStatus.BAD_REQUEST);
         }
 
         HardSkills hardskill = impHardService.getOne(id).get();

@@ -8,6 +8,7 @@ public class dtoHard {
     private String nombre;
     @NotBlank
     private int porcentaje;
+    @NotBlank
     private String URLimg;
     
 

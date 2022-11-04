@@ -58,9 +58,7 @@ public class PersonaController {
         if(StringUtils.isBlank(dtopersona.getApellido())){
             return new ResponseEntity (new Mensaje("El apellido es obligatorio"),HttpStatus.BAD_REQUEST);
         }
-        if(StringUtils.isBlank(dtopersona.getImg())){
-            return new ResponseEntity (new Mensaje("La Url es obligatoria"),HttpStatus.BAD_REQUEST);
-        }
+        
         if(StringUtils.isBlank(dtopersona.getCv())){
             return new ResponseEntity (new Mensaje("La Url es obligatoria"),HttpStatus.BAD_REQUEST);
         }
@@ -88,9 +86,6 @@ public class PersonaController {
         }
         if(StringUtils.isBlank(dtopersona.getApellido())){
             return new ResponseEntity(new Mensaje("El campo apellido no puede estar vacio"),HttpStatus.BAD_REQUEST);
-        }
-        if(StringUtils.isBlank(dtopersona.getImg())){
-            return new ResponseEntity(new Mensaje("El campo Imagen no puede estar vacio"),HttpStatus.BAD_REQUEST);
         }
         if(StringUtils.isBlank(dtopersona.getCv())){
             return new ResponseEntity(new Mensaje("El campo Curriculum Vitae no puede estar vacio"),HttpStatus.BAD_REQUEST);
